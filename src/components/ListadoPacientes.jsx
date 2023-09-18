@@ -42,4 +42,4 @@ const ListadoPacientes = ({pacientes, setPaciente, eliminarPaciente}) => {
   )
 }
 
-export default ListadoPacientes;
+export default ListadoPacientes

@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
-import Error from "./Error";
+import Error from "./Error"
 
-const Formulario = ( {pacientes, setPacientes, paciente }, setPaciente) => {
-  const [nombre, setNombre] = useState('');
-  const [propietario, setPropietario] = useState('');
-  const [email, setEmail] = useState('');
-  const [alta, setAlta] = useState('');
-  const [sintomas, setSintomas] = useState('');
+const Formulario = ( {pacientes, setPacientes, paciente, setPaciente} ) => {
+  const [nombre, setNombre] = useState('')
+  const [propietario, setPropietario] = useState('')
+  const [email, setEmail] = useState('')
+  const [alta, setAlta] = useState('')
+  const [sintomas, setSintomas] = useState('')
 
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     if ( Object.keys(paciente).length > 0) {
@@ -22,7 +22,7 @@ const Formulario = ( {pacientes, setPacientes, paciente }, setPaciente) => {
 
 
   const generarId = () => {
-    const random = Math.random().toString(36).substring(2);
+    const random = Math.random().toString(36).substring(2)
     const fecha = Date.now().toString(36)
 
     return random + fecha
@@ -30,7 +30,7 @@ const Formulario = ( {pacientes, setPacientes, paciente }, setPaciente) => {
 
 
   const handleSubmit = (e) => {
-   e.preventDefault();
+   e.preventDefault()
 
     //Validacion Formulario
     if ([nombre, propietario, email, alta, sintomas].includes('')) {
@@ -177,4 +177,4 @@ const Formulario = ( {pacientes, setPacientes, paciente }, setPaciente) => {
   )
 }
 
-export default Formulario;
+export default Formulario
